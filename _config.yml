@@ -1,0 +1,53 @@
+title: "SEGRİ Dashboard"
+description: "Girişimcilik Ruhu İndeksi - Entrepreneurial Spirit Index"
+url: "https://segrindex.com"
+baseurl: ""
+
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - vite.config.ts
+  - tsconfig.json
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - replit.md
+  - .replit
+  - "*.ts"
+  - "*.tsx"
+  - api.ts
+  - App.tsx
+  - index.tsx
+  - hooks.ts
+  - utils.ts
+  - types.ts
+  - constants.ts
+  - accessUtils.ts
+  - components
+  - _site
+  - .git
+  - .github
+  - .cache
+  - .local
+  - .agents
+  - migrated_prompt_history
+  - metadata.json
+  - CNAME
+
+include:
+  - _pages
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
