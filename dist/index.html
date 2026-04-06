@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEGRİ Dashboard | Girişimcilik Ruhu İndeksi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        overflow: hidden;
+        color: #0f172a; /* Çok koyu lacivert/gri metin rengi */
+        background-color: #f1f5f9;
+        -webkit-font-smoothing: antialiased;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .sidebar-transition {
+        transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      /* Contrast helpers */
+      .text-high-contrast { color: #020617; }
+      .text-mid-contrast { color: #334155; }
+      .bg-card { background-color: #ffffff; }
+      
+      /* Custom Slider styling for better visibility */
+      input[type=range]::-webkit-slider-thumb {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background: #1e40af;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -6px;
+        box-shadow: 0 0 4px rgba(0,0,0,0.2);
+      }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "@tanstack/react-query": "https://esm.sh/@tanstack/react-query@^5.28.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-BZe-BxxS.js"></script>
+</head>
+  <body>
+    <div id="root"></div>
+</body>
+</html>
