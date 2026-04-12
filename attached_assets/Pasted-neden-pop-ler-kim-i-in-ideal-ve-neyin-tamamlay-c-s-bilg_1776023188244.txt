@@ -1,0 +1,83 @@
+neden popüler, kim için ideal ve neyin tamamlayıcısı bilgilerini ekledim.1. Genel Vibe-Coding & AI Kodlama IDE’leriCursor  Açıklama: VS Code tabanlı AI-first IDE; Agent Mode ile repo tarar, multi-file edit yapar, hata düzeltir.  
+Fiyat: Hobby (Free), Pro $20/ay ($16 yıllık), Pro+ $60/ay, Ultra $200/ay, Teams $40/kullanıcı/ay.  
+Neden: En hızlı ve güçlü agent deneyimi; X’te solo dev’lerin %70+ tavsiye ettiği araç.  
+Kim için: Kod bilen ama hız isteyen indie hacker’lar ve geliştiriciler.  
+Neyin tamamlayıcısı: v0 + Vercel ile full-stack tamamlar.
+Windsurf  Açıklama: Agentic IDE; Cascade ajanları ile otonom multi-file edit ve shell komutları.  
+Fiyat: Free tier + Pro $15/ay.  
+Neden: Büyük codebase’lerde context derinliği en iyi.  
+Kim için: Ekip çalışması yapanlar ve scale eden projeler.  
+Neyin tamamlayıcısı: Cursor’un büyük proje alternatifi.
+Claude Code (Anthropic)  Açıklama: Claude 4 ile düşük hata oranlı kod ve terminal ajan.  
+Fiyat: API kullanımı ~$20/ay (yoğun kullanım).  
+Neden: En güvenilir ve az halüsinasyonlu kod üretimi.  
+Kim için: Production-grade kod isteyen profesyoneller.  
+Neyin tamamlayıcısı: Cursor/Windsurf ile birlikte kullanılır.
+2. Full-Stack App Builder’lar (Non-Coder Odaklı)Lovable  Açıklama: Chat ile React + Supabase full-stack app üretir, visual edit var.  
+Fiyat: Free (sınırlı kredi), Pro $25/ay, Business $50/ay, Enterprise Custom.  
+Neden: Non-coder’lar için en dengeli; managed hosting + custom domain.  
+Kim için: Kod bilmeyen founder’lar ve hızlı MVP isteyenler.  
+Neyin tamamlayıcısı: v0 (UI) ile kombine edilir.
+Hostinger Horizons  Açıklama: Prompt ile app + hosting/domain/SSL/email tamamen entegre.  
+Fiyat: Explorer $6.99/ay (30 kredi), Starter $13.99/ay, Hobbyist $39.99/ay, Hustler $79.99/ay.  
+Neden: En ucuz ve en entegre (üçüncü parti yok).  
+Kim için: Teknik sıfır olan girişimciler.  
+Neyin tamamlayıcısı: Hiçbir şeye ihtiyaç duymaz, standalone.
+Mocha (getmocha.com)  Açıklama: Built-in database, auth, payments ve hosting ile tam no-code app builder.  
+Fiyat: Free başlangıç, Bronze $20/ay, Silver $50/ay, Gold $200/ay.  
+Neden: Hosting + backend tamamen içinde; en az konfigürasyon.  
+Kim için: Kod/hosting bilmeyen solopreneur’lar.  
+Neyin tamamlayıcısı: Dış servis (Supabase/Vercel) ihtiyacını ortadan kaldırır.
+Bolt.new  Açıklama: Browser tabanlı hızlı prototipleme + terminal entegrasyonu.  
+Fiyat: Free (1M token), Pro $25/ay (10M token), Teams $30/kullanıcı/ay.  
+Neden: Dakikalar içinde çalışan app + one-click deploy.  
+Kim için: Hızlı iterasyon sevenler.  
+Neyin tamamlayıcısı: v0 ile UI, Lovable ile full-stack tamamlar.
+Replit Agent  Açıklama: Cloud IDE + otomatik hosting/custom domain.  
+Fiyat: Güçlü free tier + Teams $20/ay.  
+Neden: Collab ve anında deploy kolay.  
+Kim için: Öğrenenler ve küçük takımlar.  
+Neyin tamamlayıcısı: Hızlı test için ideal.
+3. UI/Frontend Odaklıv0 by Vercel  Açıklama: Prompt ile React/Tailwind UI komponent üretir.  
+Fiyat: Free tier + Pro $20/ay.  
+Neden: En güzel ve production-ready UI’lar.  
+Kim için: Tasarım odaklı projeler.  
+Neyin tamamlayıcısı: Cursor ile backend tamamlanır.
+4. Mobil OdaklıCapsule / Rork / Natively.dev / Vibecode.app  Açıklama: Text-to-mobile app (React Native/Expo tabanlı).  
+Fiyat: Çoğu freemium (detaylı fiyat sitelerinde).  
+Neden: Native mobil export kolay.  
+Kim için: Mobil app fikri olan non-coder’lar.  
+Neyin tamamlayıcısı: Expo/EAS ile store submit tamamlanır.
+5. Oyun Geliştirme Araçları (No-Code / Vibe-Coding)Rosebud AI  Açıklama: Prompt ile 2D/3D oyun + asset üretimi.  
+Fiyat: Free tier + Pro (yaklaşık $15/ay).  
+Neden: Gambo’ya en yakın vibe-coding deneyimi.  
+Kim için: Oyun fikri olan non-coder’lar.  
+Neyin tamamlayıcısı: FlutterFlow ile mobil export.
+Buildbox  Açıklama: Drag-and-drop mobil hyper-casual oyun builder.  
+Fiyat: Beginner ~$15/ay, diğer planlar $59.99+.  
+Neden: Direkt App Store/Google Play export.  
+Kim için: Kolay mobil oyun yapanlar.  
+Neyin tamamlayıcısı: Hiçbir şeye ihtiyaç duymaz.
+GDevelop  Açıklama: Görsel event sistemiyle 2D oyunlar.  
+Fiyat: Free + Silver $7.99/ay, Gold $13.99/ay, Pro $39.99/ay.  
+Neden: Ücretsiz ve güçlü mobil export.  
+Kim için: Bütçe dostu oyun geliştiriciler.  
+Neyin tamamlayıcısı: Standalone.
+Jabali.ai / Playmix.ai / Spawn.co / Makko.ai  Açıklama: Prompt ile hızlı playable oyun.  
+Fiyat: Free early access + Pro (değişken).  
+Neden: Gambo kapanışından sonra en hızlı alternatifler.  
+Kim için: Prompt seven oyun meraklıları.
+Gambo.ai  Açıklama: Dünyanın ilk Game Vibe Coding Agent’i.  
+Fiyat: Kapanıyor (1 Mayıs 2026).  
+Neden: Tarihsel olarak ilk ve en iddialı.  
+Kim için: — (artık migrasyon önerilir).  
+Neyin tamamlayıcısı: Rosebud/Jabali ile değiştirilir.
+6. Tamamlayıcı HizmetlerSupabase / Firebase: Backend/auth/veritabanı (çoğu araçta kullanılır).  
+Vercel / Netlify: Deploy ve hosting (manuel projelerde).  
+Expo / EAS: React Native mobil build ve store submit.  
+Midjourney: Asset üretimi (oyun ve UI için).
+
+Nihai Öneriler (Kod/Hosting Bilgisi Olmayanlar İçin – 2026)Web/SaaS App → Mocha veya Hostinger Horizons (en az teknik müdahale).  
+Mobil Oyun → Buildbox (kolay export) veya GDevelop (ücretsiz).  
+Vibe-Coding Deneyimi → Lovable + Bolt.new + Rosebud AI.
+
