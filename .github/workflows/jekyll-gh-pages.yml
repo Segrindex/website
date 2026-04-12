@@ -10,6 +10,9 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -17,29 +20,37 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # ✅ Updated Node (future-proof)
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
+      # ✅ Safer install
       - name: Install npm dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build with Vite
         run: npm run build
 
+      # ✅ Prepare full Jekyll context
       - name: Prepare Jekyll site
         run: |
+          cp -r _layouts dist/ || true
+          cp -r _includes dist/ || true
+          cp -r _posts dist/ || true
           cp Gemfile dist/Gemfile
           cp Gemfile.lock dist/Gemfile.lock
           cp _config.yml dist/_config.yml
           touch dist/.nojekyll
 
+      # ✅ Ruby (already correct)
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -47,8 +58,9 @@ jobs:
           bundler-cache: true
           working-directory: dist
 
+      # ✅ Explicit build output
       - name: Build with Jekyll
-        run: bundle exec jekyll build --baseurl ""
+        run: bundle exec jekyll build --destination ./_site --baseurl ""
         working-directory: dist
         env:
           JEKYLL_ENV: production
@@ -67,7 +79,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
