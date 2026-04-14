@@ -1,76 +1,81 @@
 import React from 'react';
 import { Rocket, TrendingUp, DollarSign, Users, Target, Clock, Globe, ShieldCheck } from 'lucide-react';
+import { useLanguage } from '../LanguageContext';
 
-const MetricCard = ({ title, description, whyImportant, howToMeasure, source, target, frequency, icon: Icon }: any) => (
-  <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 hover:shadow-md transition-shadow duration-300">
+const MetricCard = ({ title, description, whyImportant, howToMeasure, source, target, frequency, icon: Icon }: any) => {
+  const { t } = useLanguage();
+  return (
+  <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow duration-300 hover-card">
     <div className="flex items-start gap-4 mb-4">
-      <div className="p-3 rounded-lg bg-blue-50 text-blue-700">
+      <div className="p-3 rounded-lg bg-red-50 text-gray-700">
         <Icon size={24} />
       </div>
       <div>
-        <h3 className="text-lg font-bold text-slate-900">{title}</h3>
-        <p className="text-sm text-slate-600 mt-1">{description}</p>
+        <h3 className="text-lg font-bold text-fintech-charcoal">{t(title)}</h3>
+        <p className="text-sm text-gray-700 mt-1">{t(description)}</p>
       </div>
     </div>
     
     <div className="space-y-4">
-      <div className="bg-slate-50 p-3 rounded-lg">
-        <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Neden Önemli?</h4>
-        <ul className="list-disc list-inside text-sm text-slate-700 space-y-1">
+      <div className="bg-white p-3 rounded-lg">
+        <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">{t('Neden Önemli?')}</h4>
+        <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
           {whyImportant.map((item: string, idx: number) => (
-            <li key={idx}>{item}</li>
+            <li key={idx}>{t(item)}</li>
           ))}
         </ul>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Nasıl Ölçülür?</h4>
-          <p className="text-sm font-mono text-slate-800 bg-slate-100 p-2 rounded border border-slate-200">{howToMeasure}</p>
+          <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">{t('Nasıl Ölçülür?')}</h4>
+          <p className="text-sm font-mono text-fintech-charcoal bg-fintech-gray p-2 rounded border border-gray-200">{t(howToMeasure)}</p>
         </div>
         <div>
-          <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Veri Kaynağı</h4>
-          <p className="text-sm text-slate-700">{source}</p>
+          <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">{t('Veri Kaynağı')}</h4>
+          <p className="text-sm text-gray-700">{t(source)}</p>
         </div>
       </div>
 
-      <div className="flex items-center justify-between pt-4 border-t border-slate-100">
+      <div className="flex items-center justify-between pt-4 border-t border-gray-200">
         <div>
-          <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block">Hedef</span>
-          <span className="text-sm font-semibold text-emerald-700">{target}</span>
+          <span className="text-xs font-bold text-gray-500 uppercase tracking-wider block">{t('Hedef')}</span>
+          <span className="text-sm font-semibold text-fintech-charcoal">{t(target)}</span>
         </div>
         <div className="text-right">
-          <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block">Sıklık</span>
-          <span className="text-sm font-medium text-slate-700">{frequency}</span>
+          <span className="text-xs font-bold text-gray-500 uppercase tracking-wider block">{t('Sıklık')}</span>
+          <span className="text-sm font-medium text-gray-700">{t(frequency)}</span>
         </div>
       </div>
     </div>
   </div>
-);
+)};
 
-const SectionHeader = ({ title, icon: Icon }: any) => (
-  <div className="flex items-center gap-3 mb-6 mt-10 pb-2 border-b border-slate-200">
-    <Icon className="text-blue-800" size={28} />
-    <h2 className="text-2xl font-black text-slate-900 tracking-tight">{title}</h2>
+const SectionHeader = ({ title, icon: Icon }: any) => {
+  const { t } = useLanguage();
+  return (
+  <div className="flex items-center gap-3 mb-6 mt-10 pb-2 border-b border-gray-200">
+    <Icon className="text-gray-700" size={28} />
+    <h2 className="text-2xl font-black text-fintech-charcoal tracking-tight">{t(title)}</h2>
   </div>
-);
+)};
 
 const StartupMetrics: React.FC = () => {
+  const { t } = useLanguage();
   return (
     <div className="space-y-8 animate-in fade-in duration-500">
-      <div className="bg-gradient-to-r from-blue-900 to-indigo-900 rounded-2xl p-8 text-white shadow-xl">
+      <div className="bg-gradient-to-r from-fintech-charcoal to-fintech-charcoal rounded-2xl p-8 text-white shadow-xl">
         <div className="flex items-center gap-4 mb-4">
           <div className="p-3 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20">
-            <Rocket size={32} className="text-blue-200" />
+            <Rocket size={32} className="text-red-200" />
           </div>
           <div>
-            <h1 className="text-3xl font-black tracking-tight">Yüksek Büyüme Startup Metrikleri</h1>
-            <p className="text-blue-200 font-medium mt-1">Venture-scale girişimler için performans göstergeleri</p>
+            <h1 className="text-3xl font-black tracking-tight">{t('Yüksek Büyüme Startup Metrikleri')}</h1>
+            <p className="text-red-200 font-medium mt-1">{t('Venture-scale girişimler için performans göstergeleri')}</p>
           </div>
         </div>
-        <p className="text-blue-100 max-w-3xl leading-relaxed opacity-90">
-          Bu bölüm, hızlı ölçeklenme, exit potansiyeli ve pazar hakimiyeti hedefleyen girişimler için kritik başarı metriklerini içerir. 
-          Agresif büyüme (10x-100x) ve yüksek risk-yüksek getiri profiline sahip girişimler için özelleştirilmiştir.
+        <p className="text-red-50 max-w-3xl leading-relaxed opacity-90">
+          {t('Bu bölüm, hızlı ölçeklenme, exit potansiyeli ve pazar hakimiyeti hedefleyen girişimler için kritik başarı metriklerini içerir. Agresif büyüme (10x-100x) ve yüksek risk-yüksek getiri profiline sahip girişimler için özelleştirilmiştir.')}
         </p>
       </div>
 

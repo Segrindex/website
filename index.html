@@ -3,16 +3,76 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SEGRİ Dashboard | Girişimcilik Ruhu İndeksi</title>
+    <title>SEGRİ (Beta) | Girişimcilik Paneli</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+              heading: ['Manrope', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+              fintech: {
+                primary: '#2962FF',
+                teal: '#00BFA6',
+                coral: '#FF5252',
+                amber: '#FFAB00',
+                charcoal: '#1A1A2E',
+                white: '#FFFFFF',
+                gray: '#F5F7FA',
+              },
+              module: {
+                benchmark: {
+                  light: '#4A6B5D',
+                  dark: '#2E5542',
+                },
+                feedback: {
+                  light: '#C17B4C',
+                  dark: '#9B5A2F',
+                },
+                calc: {
+                  light: '#B58B5D',
+                  dark: '#8B5A2B',
+                },
+                validity: {
+                  light: '#5B6E8B',
+                  dark: '#3A4E6B',
+                }
+              }
+            },
+            animation: {
+              'leaf-fall': 'leafFall 2s ease-in-out',
+              'fade-in': 'fadeIn 0.5s ease-out',
+            },
+            keyframes: {
+              leafFall: {
+                '0%': { transform: 'translateY(-10px) rotate(-10deg) scale(0.8)', opacity: '0' },
+                '20%': { opacity: '1', transform: 'translateY(0) rotate(0deg) scale(1.1)' },
+                '50%': { transform: 'translateY(5px) rotate(10deg) scale(1)' },
+                '100%': { transform: 'translateY(0) rotate(0deg) scale(1)', opacity: '0' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(5px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
     <style>
       body {
         font-family: 'Inter', system-ui, -apple-system, sans-serif;
         overflow: hidden;
-        color: #0f172a; /* Çok koyu lacivert/gri metin rengi */
-        background-color: #f1f5f9;
+        color: #1A1A2E; /* Deep Charcoal */
+        background-color: #F5F7FA; /* Soft Gray */
         -webkit-font-smoothing: antialiased;
+      }
+      h1, h2, h3, h4, h5, h6, .font-heading {
+        font-family: 'Manrope', system-ui, -apple-system, sans-serif;
       }
       .scrollbar-hide::-webkit-scrollbar {
         display: none;
@@ -25,20 +85,58 @@
         transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       }
       /* Contrast helpers */
-      .text-high-contrast { color: #020617; }
-      .text-mid-contrast { color: #334155; }
-      .bg-card { background-color: #ffffff; }
+      .text-high-contrast { color: #1A1A2E; }
+      .text-mid-contrast { color: #4A5568; }
+      .bg-card { background-color: #FFFFFF; }
       
       /* Custom Slider styling for better visibility */
       input[type=range]::-webkit-slider-thumb {
         height: 20px;
         width: 20px;
         border-radius: 50%;
-        background: #1e40af;
+        background: #2962FF; /* Electric Blue */
         cursor: pointer;
         -webkit-appearance: none;
         margin-top: -6px;
         box-shadow: 0 0 4px rgba(0,0,0,0.2);
+        transition: transform 0.2s ease;
+      }
+      input[type=range]::-webkit-slider-thumb:hover {
+        transform: scale(1.1);
+      }
+      input[type=range]:focus::-webkit-slider-thumb {
+        outline: 2px solid #FFAB00;
+        outline-offset: 2px;
+      }
+      
+      /* Focus states for accessibility */
+      *:focus-visible {
+        outline: 2px solid #FFAB00;
+        outline-offset: 2px;
+      }
+      
+      /* Hover states */
+      .hover-card {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .hover-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      
+      /* Abstract geometric background */
+      .bg-geometric {
+        background-image: radial-gradient(#2962FF 1px, transparent 1px), radial-gradient(#2962FF 1px, transparent 1px);
+        background-size: 40px 40px;
+        background-position: 0 0, 20px 20px;
+        opacity: 0.05;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        z-index: 0;
       }
     </style>
   <script type="importmap">
